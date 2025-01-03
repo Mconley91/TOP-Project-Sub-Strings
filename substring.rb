@@ -1,4 +1,4 @@
-dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit","low","low","low","low"]
+dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 puts "Enter a word to see how many times this word or a sub string of the word appears in the given dictionary"
 input_sentence = gets.chomp.downcase
 
