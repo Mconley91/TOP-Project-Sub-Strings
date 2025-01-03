@@ -1,19 +1,15 @@
-dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
+dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit","low","low","low","low"]
 puts "Enter a word to see how many times this word or a sub string of the word appears in the given dictionary"
-word = gets.chomp
+input_sentence = gets.chomp.downcase
 
-def find_sub_string(word,dictionary)
-  substring_hash = {}
-  split_word = word.split("")
-  split_word.each_with_index do|letter,index|
-    possible_sub_string = []
-    for i in 0..index do
-      possible_sub_string << split_word[i]
-    end
-    puts "Ouput: #{possible_sub_string.join("")}"
+def find_sub_string(input_sentence,dictionary)
+  split_words = input_sentence.split(" ")
+  sub_string_hash = {}
+  split_words.map do|word|
+    dictionary.each{|entry| word.include?(entry) ? sub_string_hash[entry] ? sub_string_hash[entry] += 1 : sub_string_hash[entry] = 1 : ''}
   end
-  
-  # puts substring_hash
+  puts sub_string_hash
+  sub_string_hash
 end
 
-find_sub_string(word, dictionary)
+find_sub_string(input_sentence, dictionary)
